@@ -1,17 +1,17 @@
 # Import the Active Directory module
 Import-Module ActiveDirectory
 
-# Define the paths to the CSV and text files containing data for the user account
+# Define the paths to account data files
 $firstNameFile = ".\resources\firstnames.csv"
 $lastNameFile = ".\resources\surnames.csv"
 $passwordFile = ".\resources\passwords.txt"
 $domainGroupsFile = ".\resources\domain-groups.txt"
 
 # Prompt the user for the number of users to create
-$numberOfUsers = Read-Host "How many user accounts do you want to create?"
+$UserCount = Read-Host "How many user accounts do you want to create? "
 
-# Loop through the number of users specified by the user
-for ($i = 1; $i -le $numberOfUsers; $i++) {
+# Loop based on user input
+for ($i = 1; $i -le $UserCount; $i++) {
     $firstName = (Get-Content $firstNameFile | Get-Random).Trim()
     $lastName = (Get-Content $lastNameFile | Get-Random).Trim()
     $password = (Get-Content $passwordFile | Get-Random).Trim()

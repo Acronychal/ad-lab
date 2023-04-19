@@ -9,11 +9,17 @@ This is a collection of active directory labs conducted in a virtual environment
 - Server Windows Server 2022
 - Client Windows Enterprise 11
 
-# lab topology
+# Lab Topology
 ![Lab Diagram](diagrams/AD-LAB-Topology.png)
 
-# 
+ Proxmox VE is used to host both client and server under an OVS bridge and OVS intport
 
+The Domain controller acts as ADDS, DNS, DHCP, RAS server.  
+
+```
+Start-Process powershell -Verb RunAs -ArgumentList "Install-WindowsFeature -Name AD-Domain-Services, DNS, RemoteAccess, DHCP -IncludeManagementTools -Restart"
+```
+The script above will install the required server components on the Domain Controller (DC)
 
 
 
