@@ -4,14 +4,16 @@ This is a collection of active directory labs conducted in a virtual environment
 ---
 # Lab Compontents
 - Proxmox VE 7.4 Host
-  - OVS Bridge
-  - OVS IntPort VLAN100 VLAN200
-- Firewall Pfsense
+  - OVS Bridge 500
+  - OVS IntPort 500
 - Server Windows Server 2022
 - Client Windows Enterprise 11
 
 # lab topology
-![Lab Diagram](diagrams/ad-lab1.drawio.png)
+![Lab Diagram](diagrams/AD-LAB-Topology.png)
+
+# 
+
 
 
 
