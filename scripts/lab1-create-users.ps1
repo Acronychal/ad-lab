@@ -1,6 +1,6 @@
 Import-Module ActiveDirectory
 
-# Function AD groups based text file
+# Function AD groups from text file
 function New-ADGroupsFromFile {
     [CmdletBinding()]
     param(
