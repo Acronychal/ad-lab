@@ -18,9 +18,9 @@ The scripts in this repo will help generate an ADDS lab with users who decided t
 
 The Domain controller acts as ADDS, DNS, DHCP, RAS server.  
 
-Run the script below to install required lab services then run the deployment scripts in the following order
-  1 lab1-create-forest.ps1
-  2 lab1-create-users.ps1
+Run the script below to install required lab services then run the deployment scripts in the following order:
+  1. lab1-create-forest.ps1
+  2. lab1-create-users.ps1
 
 ```
 Start-Process powershell -Verb RunAs -ArgumentList "Install-WindowsFeature -Name AD-Domain-Services, DNS, RemoteAccess, DHCP -IncludeManagementTools -Restart"
