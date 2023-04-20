@@ -1,7 +1,8 @@
 ## AD-Labs Overview
 This is an active directory lab conducted in a hyperconverged Proxmox VE cluster. 
 
-The scripts in this repo will facilitate an ADDS lab with users who decided to make poor password choices. 
+The scripts in this repo will facilitate an ADDS lab with users who decided to make poor password choices and may have unchecked access throughout the domain.
+
 
 ---
 ## Lab Compontents & Requirements
