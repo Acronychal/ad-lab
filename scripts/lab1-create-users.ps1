@@ -51,7 +51,7 @@ for ($i = 1; $i -le $UserCount; $i++) {
         Enabled = $true
         ChangePasswordAtLogon = $false
         # Set the sAMAccountName to the first initial of the first name and the last name
-        SamAccountName = ($firstName.Substring(0,1) + $lastName).ToLower()
+        SamAccountName = $_username
    
     }
 
