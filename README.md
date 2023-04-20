@@ -1,10 +1,10 @@
-# AD-Labs overview
+# AD-Labs Overview
 This is an active directory lab conducted in a virtual environment hosted in a hyperconverged Proxmox VE cluster. 
 
-The scripts in this repo will help generate an Active Directory lab with users that decided to make poor password choices. 
+The scripts in this repo will help generate an ADDS lab with users who decided to make poor password choices. 
 
 ---
-# Lab Compontents
+# Lab Compontents & Requirements
 - Proxmox VE 7.4 Host
   - OVS Bridge 500
   - OVS IntPort 500
@@ -18,14 +18,16 @@ The scripts in this repo will help generate an Active Directory lab with users t
 
 The Domain controller acts as ADDS, DNS, DHCP, RAS server.  
 
-Run the script below to install required lab services
+Run the script below to install required lab services then run the deployment scripts in the following order
+  1 lab1-create-forest.ps1
+  2 lab1-create-users.ps1
 
 ```
 Start-Process powershell -Verb RunAs -ArgumentList "Install-WindowsFeature -Name AD-Domain-Services, DNS, RemoteAccess, DHCP -IncludeManagementTools -Restart"
 ```
 
-To Do:
-  - Review and improve deployment scripts
+## To Do:
+  - Review and improve deployment scripts, README
     - DHCP configuration via powershell
     - RAS configuration via powershell
   - GUI
@@ -35,7 +37,7 @@ To Do:
 
 ## Credits
 
-Many, Many hours have been poured into this repo. It has been a learning experience and I want to thank the folks that unkownly assisted and inspired me to challenge myself. 
+Many hours have been poured into how to create this repo. Github has been a learning experience and I want to thank the folks that unkownly assisted and inspired me to challenge myself. A big thank you, you have been instrumental my success. 
 
 https://github.com/johnhammond
 https://github.com/joshmadakor1
