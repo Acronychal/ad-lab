@@ -1,6 +1,6 @@
 Import-Module ActiveDirectory
 
-# Function to create AD groups from text file
+# Function AD groups based text file
 function New-ADGroupsFromFile {
     [CmdletBinding()]
     param(
@@ -38,7 +38,7 @@ for ($i = 1; $i -le $UserCount; $i++) {
     $_username = ($firstName.Substring(0,1) + $lastName).ToLower()
     $password = ConvertTo-SecureString $_password -AsPlainText -Force
 
-    Write-Host "Creating user: $($firstName) $($lastName) $($_password)" -BackgroundColor Black -ForegroundColor Cyan
+    Write-Host "Creating user: $($firstName) $($lastName) $($_password) $($domainGroup)" -BackgroundColor Black -ForegroundColor Cyan
 
     # Define the user properties
     $userProperties = @{

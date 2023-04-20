@@ -1,17 +1,17 @@
-# AD-Labs Overview
+## AD-Labs Overview
 This is an active directory lab conducted in a hyperconverged Proxmox VE cluster. 
 
 The scripts in this repo will facilitate an ADDS lab with users who decided to make poor password choices. 
 
 ---
-# Lab Compontents & Requirements
+## Lab Compontents & Requirements
 - Proxmox VE 7.4 Host
   - OVS Bridge
   - OVS IntPort
 - Server: Windows Server 2022
 - Client: Windows Enterprise 11
 
-# Lab Topology
+## Lab Topology
 ![Lab Diagram](diagrams/AD-LAB-Topology.png)
 
  Proxmox VE is used to host both client and server under an OVS bridge and OVS intport
@@ -40,7 +40,7 @@ Run the deployment scripts in the following order:
 
 ## Credits
 
-Many hours have been poured into how to create this repo. Github has been a learning experience and I want to thank the folks that unkownly assisted and inspired me to challenge myself. A big thank you, you have been instrumental my success. 
+Many hours have been poured into how to create this repo. Github has been a learning experience and I want to thank the folks that unkownly assisted and inspired me to challenge myself. A big thank you, you have been instrumental to my success. 
 
 https://github.com/johnhammond
 https://github.com/joshmadakor1
