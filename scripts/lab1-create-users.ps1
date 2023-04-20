@@ -1,6 +1,6 @@
 Import-Module ActiveDirectory
 
-# Function AD groups from text file
+# Function to create AD groups from text file
 function New-ADGroupsFromFile {
     [CmdletBinding()]
     param(

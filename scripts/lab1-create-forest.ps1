@@ -5,7 +5,7 @@ $domainName = Read-Host -Prompt 'Enter the domain name '
 # Setup Variables
 $databasePath = 'C:\Windows\NTDS'
 $domainMode = 'WinThreshold'
-$domainNetbiosName = $domainName.Split('.')[0].ToUpper() # Reformulate NetBIOS name
+$domainNetbiosName = $domainName.Split('.')[0].ToUpper()
 $forestMode = 'WinThreshold'
 $installDns = $true
 $logPath = 'C:\Windows\NTDS'
