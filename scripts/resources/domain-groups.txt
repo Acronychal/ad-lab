@@ -1,4 +1,7 @@
 Domain Admins
+Administrators
+RDS Management Servers
+Remote Desktop Users
 IT
 Chief
 AA

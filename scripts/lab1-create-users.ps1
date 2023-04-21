@@ -35,14 +35,17 @@ for ($i = 1; $i -le $UserCount; $i++) {
     $lastName = (Get-Content $lastNameFile | Get-Random).Trim("""")
     $_password = (Get-Content $passwordFile | Get-Random).Trim()
     $domainGroup = (Get-Content $domainGroupsFile | Get-Random).Trim()
-    $_username = ($firstName.Substring(0,1) + $lastName).ToLower()
+    $_username = ($firstName + "." + $lastName).ToLower()
     $password = ConvertTo-SecureString $_password -AsPlainText -Force
 
-    Write-Host "Creating user: $($firstName) $($lastName) $($_password) $($domainGroup)" -BackgroundColor Black -ForegroundColor Cyan >> C:\Windows\Tasks\lab-key.csv
+    Write-Host "Creating user: $($firstName) $($lastName) $($_password) $($domainGroup)" -BackgroundColor Black -ForegroundColor Cyan
+    
+    $file_output = $firstName + "," + $lastName + "," + $_password + "," + $domainGroup
+    Out-File -Filepath C:\Windows\Tasks\lab-key.csv -InputObject $file_output -Append
 
     # Define the user properties
     $userProperties = @{
-        Name = ($firstName.Substring(0,1) + $lastName).ToLower()
+        Name = ($firstName + " " + $lastName).totittlecase()
         GivenName = $firstName
         Surname = $lastName
         DisplayName = $firstName + " " + $lastName
