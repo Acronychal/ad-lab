@@ -45,7 +45,7 @@ for ($i = 1; $i -le $UserCount; $i++) {
 
     # Define the user properties
     $userProperties = @{
-        Name = ($firstName + " " + $lastName).totittlecase()
+        Name = ($firstName + "." + $lastName).totittlecase()
         GivenName = $firstName
         Surname = $lastName
         DisplayName = $firstName + " " + $lastName
