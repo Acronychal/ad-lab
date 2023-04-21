@@ -31,8 +31,8 @@ New-ADGroupsFromFile -Path $domainGroupsFile
 
 # Create user for loop engine
 for ($i = 1; $i -le $UserCount; $i++) {
-    $firstName = (Get-Content $firstNameFile | Get-Random).Trim("""")
-    $lastName = (Get-Content $lastNameFile | Get-Random).Trim("""")
+    $firstName = (Get-Content $firstNameFile | Get-Random).Trim()
+    $lastName = (Get-Content $lastNameFile.totittlecase | Get-Random).Trim()
     $_password = (Get-Content $passwordFile | Get-Random).Trim()
     $domainGroup = (Get-Content $domainGroupsFile | Get-Random).Trim()
     $_username = ($firstName.Substring(0,1) + $lastName).ToLower()
