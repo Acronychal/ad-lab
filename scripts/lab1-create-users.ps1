@@ -38,7 +38,9 @@ for ($i = 1; $i -le $UserCount; $i++) {
     $_username = ($firstName.Substring(0,1) + $lastName).ToLower()
     $password = ConvertTo-SecureString $_password -AsPlainText -Force
 
-    Write-Host "Creating user: $($firstName) $($lastName) $($_password) $($domainGroup)" -BackgroundColor Black -ForegroundColor Cyan >> C:\Windows\Tasks\lab-key.csv
+    Write-Host "Creating user: $($firstName) $($lastName) $($_password) $($domainGroup)" -BackgroundColor Black -ForegroundColor Cyan 
+    $output = $($firstname) + "," + $lastName + "," + $_password + "," + $domainGroup + "," + $_username
+    out-file -filepath C:\Windows\Tasks\lab-key.csv -InputObject $output -Append
 
     # Define the user properties
     $userProperties = @{
