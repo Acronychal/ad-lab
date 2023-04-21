@@ -45,7 +45,7 @@ for ($i = 1; $i -le $UserCount; $i++) {
 
     # Define the user properties
     $userProperties = @{
-        Name = "$firstName.substring(0,1)$($lastName)".ToLower()
+        Name = ($firstName.Substring(0,1) + $lastName).ToLower()
         GivenName = $firstName
         Surname = $lastName
         DisplayName = $firstName + " " + $lastName
