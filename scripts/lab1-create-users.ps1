@@ -35,24 +35,23 @@ for ($i = 1; $i -le $UserCount; $i++) {
     $lastName = (Get-Content $lastNameFile | Get-Random).Trim()
     $_password = (Get-Content $passwordFile | Get-Random).Trim()
     $domainGroup = (Get-Content $domainGroupsFile | Get-Random).Trim()
-    $_username = ($firstName.Substring(0,1) + $lastName).ToLower()
+    $_username = ($firstName + "." + $lastName).ToLower()
     $password = ConvertTo-SecureString $_password -AsPlainText -Force
 
     Write-Host "Creating user: $($firstName) $($lastName) $($_password) $($domainGroup) $($_username)" -BackgroundColor Black -ForegroundColor Cyan 
-    $output = $($firstname) + "," + $lastName + "," + $_password + "," + $domainGroup + "," + $_username
+    $output = $($firstname) + "," + $($lastName) + "," + $($_password) + "," + $($domainGroup) + "," + $($_username)
     out-file -filepath C:\Windows\Tasks\lab-key.csv -InputObject $output -Append
 
     # Define the user properties
     $userProperties = @{
-        Name = ($firstName.Substring(0,1) + $lastName).ToLower()
+        Name = $_username
         GivenName = $firstName
         Surname = $lastName
         DisplayName = $firstName + " " + $lastName
-        UserPrincipalName = $firstName + "." + $lastName + "@" + $domainName
+        UserPrincipalName = $_username + "@" + $domainName
         AccountPassword = ConvertTo-SecureString $password -AsPlainText -Force
         Enabled = $true
         ChangePasswordAtLogon = $false
-        # Set the sAMAccountName to the first initial of the first name and the last name
         SamAccountName = $_username
    
     }
