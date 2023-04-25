@@ -17,8 +17,8 @@ function New-ADGroupsFromFile {
 }
 
 # Variables from data files
-$firstNameFile = ".\resources\firstnames.csv"
-$lastNameFile = ".\resources\surnames.csv"
+$firstNameFile = ".\resources\firstnames.txt"
+$lastNameFile = ".\resources\surnames.txt"
 $passwordFile = ".\resources\passwords.txt"
 $domainGroupsFile = ".\resources\domain-groups.txt"
 
