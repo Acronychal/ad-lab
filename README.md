@@ -36,6 +36,15 @@ Run the deployment scripts in the following order:
     - DHCP configuration via powershell
     - RAS configuration via powershell
   - GUI
+  - Lab Directory (WIP)
+    - Create hosts
+    - Setup DC
+    - Setup Environment
+    - Setup Users
+    - Create Reports
+      - get-aduser cmdlets
+        - export to files/web
+        
 
 
 
