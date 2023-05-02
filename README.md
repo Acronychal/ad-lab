@@ -3,7 +3,7 @@ This is an active directory lab conducted in a hyperconverged Proxmox VE cluster
 
 The scripts in this repo will facilitate an ADDS lab with users who decided to make poor password choices and may have unchecked access throughout the domain.
 
-A Lab-Key.csv file is generated and placed in c:\Windows\Tasks global access folder. 
+A Lab-Key.csv file is generated and placed in the ``` c:\Windows\Tasks ``` global access folder. 
 
 ---
 ## Lab Compontents & Requirements
